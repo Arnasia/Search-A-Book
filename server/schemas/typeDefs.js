@@ -23,3 +23,17 @@ const typeDefs = gql`
     token: ID
     user: User
   }
+
+  input bookInput {
+    bookId: String
+    authors: [String]
+    description: String
+    title: String
+    image: String
+    link: String
+  }
+  type Query {
+    me: User
+  }
+
+  `;
