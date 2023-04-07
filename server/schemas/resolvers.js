@@ -40,7 +40,7 @@ const resolvers = {
         const token = signToken(user);
         return { token, user };
       },
-      
+
       saveBook: async (parent, { input }, context) => {
         if (context.user) {
           const updatedUser = await User.findByIdAndUpdate(
@@ -65,4 +65,7 @@ const resolvers = {
         throw new AuthenticationError('You need to be logged in!')
       } 
     }
-}
+};
+
+
+module.exports = resolvers;
